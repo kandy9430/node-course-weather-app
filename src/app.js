@@ -6,7 +6,7 @@ const express = require("express");
 const hbs = require("hbs");
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // set handlebars view engine and views directory location
 app.set("view engine", "hbs");
@@ -85,5 +85,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`App is running on port ${port}.`);
+  console.log(`Listening on port ${port}.`);
 });

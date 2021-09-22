@@ -23,9 +23,7 @@ weatherForm.addEventListener("submit", (e) => {
   const location = searchInput.value;
   const units = unitsSelect.value;
 
-  fetch(
-    `http://localhost:3000/weather?address=${location}&units=${units}`
-  ).then((res) => {
+  fetch(`/weather?address=${location}&units=${units}`).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         return (errorMessage.textContent = data.error);
