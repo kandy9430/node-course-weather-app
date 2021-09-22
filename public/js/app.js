@@ -5,7 +5,6 @@ const weatherInfoDiv = document.querySelector("#weather-info-container");
 const weatherInfoEls = document.querySelectorAll(".weather-info");
 const errorMessage = document.querySelector("#error-message");
 const locationTitle = document.querySelector("#location");
-const icon = document.querySelector("#icon");
 const descriptionParagraph = document.querySelector("#description");
 const temperatureParagraph = document.querySelector("#temperature");
 const precipParagraph = document.querySelector("#precip");
