@@ -18,18 +18,18 @@ hbs.registerPartials(path.join(__dirname, "../templates/partials"));
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("", (req, res) => {
-  res.render("index", { title: "Weather", name: "Andrew" });
+  res.render("index", { title: "Weather", name: "Kandy9430" });
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About", name: "Andrew" });
+  res.render("about", { title: "About", name: "Kandy9430" });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     message: "This would eventually be a helpful message.",
-    name: "Andrew",
+    name: "Kandy9430",
   });
 });
 
