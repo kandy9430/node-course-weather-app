@@ -22,6 +22,7 @@ module.exports = (latitude, longitude, units, callback) => {
         precip,
         weather_descriptions,
         weather_icons,
+        humidity,
       } = body.current;
       callback(undefined, {
         description: weather_descriptions[0],
@@ -29,6 +30,7 @@ module.exports = (latitude, longitude, units, callback) => {
         temperature,
         feelslike,
         precip,
+        humidity,
         deg,
       });
     }

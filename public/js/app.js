@@ -7,6 +7,7 @@ const errorMessage = document.querySelector("#error-message");
 const locationTitle = document.querySelector("#location");
 const descriptionParagraph = document.querySelector("#description");
 const temperatureParagraph = document.querySelector("#temperature");
+const humidityParagraph = document.querySelector("#humidity");
 const precipParagraph = document.querySelector("#precip");
 
 weatherForm.addEventListener("submit", (e) => {
@@ -28,13 +29,16 @@ weatherForm.addEventListener("submit", (e) => {
       if (data.error) {
         return (errorMessage.textContent = data.error);
       }
-      const { description, deg, iconUrl, precip, temperature } = data.forecast;
+      console.log(data);
+      const { description, deg, iconUrl, precip, temperature, humidity } =
+        data.forecast;
       errorMessage.textContent = "";
       weatherInfoDiv.style.display = "flex";
       locationTitle.textContent = data.location;
       weatherInfoDiv.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(${iconUrl})`;
       descriptionParagraph.textContent = description;
       temperatureParagraph.textContent = `${temperature}\u00B0${deg}`;
+      humidityParagraph.textContent = `${humidity}% humidity`;
       precipParagraph.textContent = `${precip}% chance of rain`;
     });
   });
