@@ -29,7 +29,6 @@ weatherForm.addEventListener("submit", (e) => {
       if (data.error) {
         return (errorMessage.textContent = data.error);
       }
-      console.log(data);
       const { description, deg, iconUrl, precip, temperature, humidity } =
         data.forecast;
       errorMessage.textContent = "";
